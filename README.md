@@ -83,7 +83,8 @@ The suggested order for going through each of the directories is:
    that end, the Python community has standardized around a style guide called
    [PEP 8](https://www.python.org/dev/peps/pep-0008/). Take a look at it and
    then go over the code you've written and make sure it adheres to what PEP 8
-   recommends. Alternatively, PEP 8 linters exist for most code editors (you can
+   recommends. 
+   Alternatively, PEP 8 linters exist for most code editors (you can
    find instructions on installing a Python linter for VSCode
    [here](https://code.visualstudio.com/docs/python/linting)). Try installing
    one for your editor!

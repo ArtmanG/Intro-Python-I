@@ -31,17 +31,51 @@ import sys
 import calendar
 from datetime import datetime
 
+#now = datetime.now()
+
+#def cal(file='file', month=now.month, year=now.year):
+    #month = int(month)
+    #year = int(year)
+    #if month > 12 or month < 1:
+        #print('please provide valid month format')
+    #else:
+        #newcal = calendar.TextCalendar(firstweekday=0)
+        #newcal.formatmonth(year, month)
+        #newcal.prmonth(year, month)
+#cal(*sys.argv)
+
 # fetch command line arguments for this program
 num_args = len(sys.argv) 
 
+#inti an instance of the text calendar class
+cal = calendar.TextCalendar()
+
 # user didn't pass in any arguments
 if num_args == 1:
+  # get the current month and year
+  month = datetime.now().month
+  year = datetime.now().year
+  # render the cal for that
+
 
 # user passed in one argument
 elif num_args == 2:
+  # assume the arg is the specified month
+  # render the cal for the month of the current year
+  year = datetime.now().year
+  month = int(sys.argv[1])
 
 # user passed in two arguments
 elif num_args == 3:
+  # render the cal for the specified month and specified year
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
 
 # user passed in more than two arguments
 else:
+  # print a usage statement
+  print("usage: 14_cal.py [month] [year]")
+  # exit the program
+  sys.exit(1)
+
+cal.prmonth(year, month)

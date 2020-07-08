@@ -30,3 +30,18 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+# fetch command line arguments for this program
+num_args = len(sys.argv) 
+
+# user didn't pass in any arguments
+if num_args == 1:
+
+# user passed in one argument
+elif num_args == 2:
+
+# user passed in two arguments
+elif num_args == 3:
+
+# user passed in more than two arguments
+else:
